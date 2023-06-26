@@ -1279,18 +1279,14 @@ namespace TgBot_librarian
             }
             #endregion
         }
-
         static void Main(string[] args)
         {
-            Runtime.PythonDLL = @"C:\Users\Vitalii\AppData\Local\Programs\Python\Python311\python311.dll";
             PythonEngine.Initialize(); // Ініціалізація Python
-           
-
             var connectionString = "Data Source=debts.db";
             var dbContextOptions = new DbContextOptionsBuilder<DebtDbContext>()
                 .UseSqlite(connectionString)
                 .Options;
-
+            
             Console.WriteLine("Бот запущений" + botClient.GetMeAsync().Result.FirstName);
             var cts = new CancellationTokenSource();
             var cancellationToken = cts.Token;
@@ -1306,10 +1302,8 @@ namespace TgBot_librarian
             );
             // Завершити роботу з Python
             PythonEngine.Shutdown();
-
             Console.ReadLine();
         }
-
         public static async Task<Task> HandlePollingErrorAsync(ITelegramBotClient botClient, Exception exception, CancellationToken cancellationToken)
         {
             var ErrorMessage = exception switch
@@ -1322,10 +1316,9 @@ namespace TgBot_librarian
         }
         public static async Task SendPhoto(long chatID, string photoPath, CancellationToken token)
         {
-
             using var photoStream = new FileStream(photoPath, FileMode.Open, FileAccess.Read, FileShare.Read);
             var inputFile = new InputOnlineFile(photoStream, Path.GetFileName(photoPath));
-
+            
             Message message = await botClient.SendPhotoAsync(
                 chatId: chatID,
                 photo: inputFile,
@@ -1343,7 +1336,6 @@ namespace TgBot_librarian
                 parseMode: ParseMode.Html,
                 cancellationToken: token);
         }
-
         public static string GetRecommendationsFromPython(string query)
         {
             using (Py.GIL())
@@ -1352,7 +1344,6 @@ namespace TgBot_librarian
 
                 // Виклик функції process_query з програми Python
                 dynamic result = program.process_query(query);
-
                 return result.ToString();
             }
         }
