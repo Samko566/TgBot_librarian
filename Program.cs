@@ -17,7 +17,7 @@ namespace TgBot_librarian
     {
         private static Py.GILState _gilState; // Змінна для ініціалізації Python
         private static DebtService _debtService;
-        static TelegramBotClient botClient = new TelegramBotClient("5953908796:AAEkg6yZDvqSb5u0Ik_Oj3kv8xsFMjoIDgQ");
+        static TelegramBotClient botClient = new TelegramBotClient("API_KEY");
         public static async Task HandleUpdateAsync(ITelegramBotClient botClient, Update update, CancellationToken cancellationToken)
         {
             #region [Кнопки]
