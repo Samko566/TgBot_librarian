@@ -261,7 +261,7 @@ namespace TgBot_librarian
                 #endregion
 
                 #region [Боржники]
-                if (update.Message.Chat.Id == -1001611949669)
+                if (update.Message.Chat.Id == -PRIVATE_CHAT_ID)
                 {
                     if (messageText == "/debt")
                     {
