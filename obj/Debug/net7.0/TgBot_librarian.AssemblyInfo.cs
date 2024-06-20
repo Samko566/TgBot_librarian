@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TgBot_librarian")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5583e5c9dff39ffaf71a6cb8dae14d87e521dd99")]
 [assembly: System.Reflection.AssemblyProductAttribute("TgBot_librarian")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TgBot_librarian")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,7 @@
-﻿namespace TgBot_librarian
+﻿using TgBot_librarian.DataBase;
+using TgBot_librarian.DataBase.Entities;
+
+namespace TgBot_librarian.Services
 {
     public class DebtService
     {

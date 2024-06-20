@@ -8,9 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="pic\NewFolder\**" />
-    <EmbeddedResource Remove="pic\NewFolder\**" />
-    <None Remove="pic\NewFolder\**" />
+    <Compile Remove="Resources\Images\NewFolder\**" />
+    <EmbeddedResource Remove="Resources\Images\NewFolder\**" />
+    <None Remove="Resources\Images\NewFolder\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,7 +20,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NLog.Extensions.Logging" Version="5.3.11" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="5.3.11" />
     <PackageReference Include="python" Version="3.11.2" />
     <PackageReference Include="Python.Included" Version="3.11.2" />
     <PackageReference Include="telegram.bot" Version="18.0.0" />
@@ -30,82 +34,94 @@
     <None Update="debts.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="files\Каталог.docx">
+    <None Update="nlog.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz0.jpg">
+    <None Update="Resources\Files\Каталог.docx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz1.jpg">
+    <None Update="Resources\Images\1quiz\quiz0.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz10.jpg">
+    <None Update="Resources\Images\1quiz\quiz1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz2.jpg">
+    <None Update="Resources\Images\1quiz\quiz10.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz3.jpg">
+    <None Update="Resources\Images\1quiz\quiz2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz4.jpg">
+    <None Update="Resources\Images\1quiz\quiz3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz5.jpg">
+    <None Update="Resources\Images\1quiz\quiz4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz6.jpg">
+    <None Update="Resources\Images\1quiz\quiz5.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz7.jpg">
+    <None Update="Resources\Images\1quiz\quiz6.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz8.jpg">
+    <None Update="Resources\Images\1quiz\quiz7.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\1quiz\quiz9.jpg">
+    <None Update="Resources\Images\1quiz\quiz8.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz0.jpg">
+    <None Update="Resources\Images\1quiz\quiz9.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz1.jpg">
+    <None Update="Resources\Images\2quiz\quiz0.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz10.jpg">
+    <None Update="Resources\Images\2quiz\quiz1.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz2.jpg">
+    <None Update="Resources\Images\2quiz\quiz10.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz3.jpg">
+    <None Update="Resources\Images\2quiz\quiz2.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz4.jpg">
+    <None Update="Resources\Images\2quiz\quiz3.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz5.jpg">
+    <None Update="Resources\Images\2quiz\quiz4.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz6.jpg">
+    <None Update="Resources\Images\2quiz\quiz5.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz7.jpg">
+    <None Update="Resources\Images\2quiz\quiz6.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz8.jpg">
+    <None Update="Resources\Images\2quiz\quiz7.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\2quiz\quiz9.jpg">
+    <None Update="Resources\Images\2quiz\quiz8.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\libphoto.jpg">
+    <None Update="Resources\Images\2quiz\quiz9.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\shelves.jpg">
+    <None Update="Resources\Images\libphoto.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="pic\social.jpg">
+    <None Update="Resources\Images\shelves.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Images\social.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="python\library.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="python\library.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="python\program.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
